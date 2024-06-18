@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //Isn't it funny, how I could've done so much.. yet chose to do nothing?
+    //I'm untapped potential that I'm not even fully aware of. I can do practically anything I set my mind to.
+    //..as long as I set my mind to it. I just hope life will finally treat me well.
+    //Heck, maybe make some new friends next year. I've been pretty lonely recently.
+    //But, all that solemnity can wait. There's work to be done.
+    let voornaam = prompt("Wat is je voornaam?");
+    function control(text)
+    {
+        if (text==null)
+        {
+            alert("I'M NEARING MY DAMN LIMIT WITH YOUUU!!");
+            alert("Unprovoked browser crash? What are you talking about?");
+            alert("Ooooh. Right. The grading program and the time program.");
+            alert("Uh.. what was that about a joke getting less funny as you repeat it?");
+            alert("Anyway, yeah. Not doing that.");
+            document.write("Hey, you can't just cancel out of the prompt!");
+            return false;
+        }
+        else if (text.length==0)
+        {
+            alert("I'M NEARING MY DAMN LIMIT WITH YOUUU!!");
+            alert("Unprovoked browser crash? What are you talking about?");
+            alert("Ooooh. Right. The grading program and the time program.");
+            alert("Uh.. what was that about a joke getting less funny as you repeat it?");
+            alert("Anyway, yeah. Not doing that.");
+            document.write("Hey, you can't just enter nothing!");
+            return false;
+        }
+        else if (text.length<2)
+        {
+            alert("I'M NEARING MY DAMN LIMIT WITH YOUUU!!");
+            alert("Unprovoked browser crash? What are you talking about?");
+            alert("Ooooh. Right. The grading program and the time program.");
+            alert("Uh.. what was that about a joke getting less funny as you repeat it?");
+            alert("Anyway, yeah. Not doing that.");
+            document.write("Reaaal funny. You probably put some random number or letter there. Regardless, ain't allowed!");
+            return false;
+        }
+        else
+        {
+            const slicedtext = text.slice(1);
+            let firstl = text.charAt(0);
+            firstl = firstl.toUpperCase();
+            let newtext = firstl+slicedtext;
+            return newtext;
+        }
+    }
+    voornaam = control(voornaam);
+    if (voornaam != false)
+    {
+        let achternaam = prompt("Wat is je achternaam?");
+        achternaam = control(achternaam);
+        if ( achternaam != false)
+        {
+            document.write(`<p>Hey ${voornaam + " "+achternaam}!</p>`)
+        }
+        else
+        {
+            document.write(`<h1>Real funny, dude.</h1>`)
+        }
+    }
+    else
+    {
+        document.write(`<h1>Nuh uh.</h1>`)
+    }
+    </script>
+</body>
+
+</html>

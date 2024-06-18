@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    "use strict";
+    //Back on track.
+    //Got things working.
+    //controleAantal works as intended.
+    //controleGetal works as intended.
+    //It's a bit messy, but overall it works as intended.
+    //The for loops require let as well, so don't forget that.
+    //Anyway, it works as intended.
+    function controleAantal(text)
+    {
+        if (text==null)
+        {
+            document.write("U hebt geannuleerd.");
+            return "fout";
+        }
+        else if (text.length==0)
+        {
+            document.write("U heeft niets ingegeven.")
+            return "fout";
+        }
+        else if (isNaN(text)===true)
+        {
+            document.write("Dit is geen correcte ingave.");
+            return "fout";
+        }
+        else
+        {
+            return text;
+        }
+    }
+    function controleGetal(text)
+    {
+        if (text==null||text.length==0||isNaN(text)===true)
+        {
+            return "fout";
+        }
+        else
+        {
+            return text;
+        }
+    }
+    let aantal = prompt("Hoeveel getallen wil je ingeven?","0");
+    aantal = controleAantal(aantal)
+    let getallen = [aantal];
+    if (aantal == "fout")
+    {
+        getallen = null;
+    }
+    for (let i=0;i<aantal;i++)
+    {
+        getallen[i] = prompt(`Geef getal ${i+1} in.`);
+        getallen[i] = controleGetal(getallen[i]);
+    }
+    for (let i=0;i<getallen.length;i++)
+    {
+        document.write(`${getallen[i]}`);
+        if (i<getallen.length-1){
+            document.write(",");
+        }
+    }
+    </script>
+</body>
+
+</html>

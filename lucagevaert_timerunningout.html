@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const Day = new Date();
+        const TheHour = Day.getHours();
+        document.write(`<p>Hey, just a quick question before I fetch you the time. Are you boring or not?</p>`);
+        let boring = prompt("Are you objectively and unequivocally boring?", "yes");
+        boring = boring.toLowerCase();
+        document.write(boring);
+        function addressHour(TheHour,boring) {
+            switch (boring) { 
+            case "yes": //bruuuuuh..
+                document.write(`<p>Het is nu ${TheHour}.</p>`);
+                break;
+            case "no": //a motivational message and such.
+                document.write(`<p>Aye, ain't it like.. ${TheHour} right now?</p>`);
+                break;
+            default: //bye bye
+                document.write("bye bye.");
+                doomsdaylol = "L";
+                for (var i = 5; i > 3; i = i + 1)
+  { console.log(i); }
+            }
+        } //Yes is what you expect from me, no is what I wrote beforehand, and the default is a way to catch unwanted input. It will crash your browser, because why not.
+        switch (boring) {
+        case "yes":
+                document.write(`<p>A shame, really. Guess we can't all have fun.</p>`);
+                document.body.innerHTML="";
+                addressHour(TheHour,boring);
+                if (TheHour <= 7) //you can't yell at me. there's if else statements.
+        {
+            document.write(`<p>Goeienacht</p>`);
+        }
+        else if (TheHour <= 11) //fun fact about these things, they can't rely on strings for shit sometimes.
+        {
+            document.write(`<p>Goeiemorgen</p>`);
+        }
+        else if (TheHour <= 18) //switch cases are fun to use in that case
+        {
+            document.write(`<p>Goeiemiddag</p>`);
+        }
+        else if (TheHour > 18) //but here? yeah, no conditionals work better.
+        {
+            document.write(`<p>Goeie avond</p>`);
+        }
+                break;
+        case "no":
+            document.write(`<p>Glad you encourage thinking. No reason to clear!</p>`);
+            document.write(`<p>I'm gonna fetch the time rq, brb.</p>`);
+            addressHour(TheHour,boring);
+        if (TheHour <= 7)
+        {
+            document.write(`<p>It's night, ya should be asleep.</p>`);
+        }
+        else if (TheHour <= 11)
+        {
+            document.write(`<p>Go make breakfast and put on some fitting clothes!</p>`);
+            document.write(`<p>You probably got something important to be at in like 30 minutes!</p>`);
+        }
+        else if (TheHour <= 18)
+        {
+            document.write(`<p>It's noon, you got work to do! Come on, then. Show me what you're made of!</p>`);
+            document.write(`<p>SHOW ME JUST WHAT YOU ARE CAPABLE OF! After you finish your lunch, that is.</p>`);
+        }
+        else if (TheHour > 18)
+        {
+            document.write(`<p>It's dusk. Take a load off. Stand proud of what you've accomplished today.</p>`);
+            document.write(`<p>Ya deserve your free time, big guy. Just don't forget to make dinner for yourself, alright?</p>`);
+            document.write(`<p>Even if it is just the average college student diet of cup noodles.</p>`);
+        }
+        break;
+        default:
+            document.write(`<p>You thought you were so clever..</p>`);
+            document.write(`<p>No matter.</p>`);
+            alert("WITH THIS TREASURE I SUMMON..");
+            alert("NIGHTMARE OF ALL PROGRAMMERS");
+            alert("DIVINE CODE SINGULARITY")
+            alert("STACK OVERFLOW..");
+            alert("𝐓𝐎𝐓𝐀𝐋 𝐌𝐄𝐌𝐎𝐑𝐘 𝐂𝐑𝐀𝐒𝐇𝐎𝐔𝐓");
+            addressHour(TheHour,boring);
+        }
+    </script>
+</body>
+
+</html>

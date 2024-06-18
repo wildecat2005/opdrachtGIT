@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //what's this feeling?
+    //The will to bring things to a just end?
+    //To finally move on?
+    //To want to exist?
+    //I guess you could call it that.
+    //I know I can't stay here forever, and refusal to acknowledge that..
+    //It's just foolish, really. So, a burning flame remains.
+    //I won't give up unless I allow myself to.
+    let nummerken = prompt("Hoeveel automerken?","0");
+    let merken = [nummerken];
+    for (i=0;i<nummerken;i++)
+    {
+        merken[i] = prompt(`Geef merk nr ${i+1} in.`);
+    }
+    document.write(`<p>U gaf de volgende merken in:</p>`);
+    for (i=0;i<merken.length;i++)
+    {
+        document.write(`<p>${i+1}: ${merken[i]}</p>`);
+    }
+    </script>
+</body>
+
+</html>
